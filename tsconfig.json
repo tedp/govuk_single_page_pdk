@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES5",
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "commonjs",
@@ -9,11 +10,10 @@
     "declaration": true
   },
   "files": [
-    "typings/main.d.ts",
+    "typings/index.d.ts",
     "custom-typings.d.ts"
   ],
   "exclude": [
-    "typings/browser.d.ts",
     "node_modules"
-  ]
+   ]
 }

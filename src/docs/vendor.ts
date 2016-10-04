@@ -1,4 +1,5 @@
 import 'jquery';
+import '@govuk/angularjs-devtools';
 import 'angular';
 import 'angular-ui-bootstrap';
 import 'angular-ui-router';
@@ -8,3 +9,11 @@ import 'angular-sanitize';
 import 'prismjs';
 import 'ngSmoothScroll';
 import 'ng-clamp';
+
+// Angular2
+import '@angular/platform-browser';
+import '@angular/platform-browser-dynamic';
+import '@angular/core';
+import '@angular/common';
+import '@angular/router';
+import '@angular/upgrade';
