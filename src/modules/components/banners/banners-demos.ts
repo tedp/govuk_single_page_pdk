@@ -1,4 +1,4 @@
-import banners from './banners';
+import banners from './banners.ng1';
 import docsUtils from '../../../util/docs';
 
 import { AlertDemo } from './alert/alert.demo';
@@ -9,6 +9,7 @@ import { PageTitleDemo } from './page-title/page-title.demo';
 import { PersistInfoDemo } from './persist-info/persist-info.demo';
 import { PhaseBannerDemo } from './phase-banner/phase-banner.demo';
 import { WarningBannerDemo } from './warning/warning-banner.demo';
+import { upgradeAdapter } from '../../../docs/upgrade-adapter';
 
 const module = angular.module('govuk-single-page-pdk.component-demos.banners', [
   banners,

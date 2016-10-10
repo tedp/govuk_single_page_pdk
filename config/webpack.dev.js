@@ -11,6 +11,7 @@ module.exports = webpackMerge(commonConfig, {
   output: {
     path: helpers.root('dist'),
     filename: '[name].bundle.js',
+    sourceMapFilename: '[name].js.map',
     chunkFilename: '[id].chunk.js'
   },
   tslint: {
@@ -28,6 +29,9 @@ module.exports = webpackMerge(commonConfig, {
       aggregateTimeout: 300,
       poll: 1000
     }
+  },
+  node: {
+    console: true
   },
   plugins: [
     new HtmlWebpackPlugin({
