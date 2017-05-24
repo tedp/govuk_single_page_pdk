@@ -28,6 +28,7 @@ export class ComponentsPage {
             name: 'Forms and Errors',
             state: 'components.forms-and-errors',
             components: ['Lazy validation', 'Summary Error']
-        }
+        },
+        {name: 'Scheduling', state: 'components.scheduling', components: ['Scheduling']}
     ];
 }

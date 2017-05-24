@@ -14,6 +14,7 @@ import { LayoutPage } from './app/components/layout/layout';
 import { MediaPage } from './app/components/media/media.component.ts';
 import { NavigationPage } from './app/components/navigation/navigation.component.ts';
 import { TimelinePage } from './app/components/timeline/timeline.component.ts';
+import { SchedulingPage } from './app/components/scheduling/scheduling.component';
 import { ContentPage } from './app/content/content.component';
 import { ExamplesPage } from './app/examples/examples.component';
 import { ColoursPage } from './app/content/colours/colours.component';
@@ -53,6 +54,7 @@ angular.module('govuk-single-page-pdk.docs', [
   .component('govDocsComponentsMediaPage', MediaPage)
   .component('govDocsComponentsNavigationPage', NavigationPage)
   .component('govDocsComponentsTimelinePage', TimelinePage)
+  .component('govDocsComponentsSchedulingPage', SchedulingPage)
   .component('govDocsContentPage', ContentPage)
   .component('govDocsExamplesPage', ExamplesPage)
   .component('govDocsLayoutPage', Layout)

@@ -1,0 +1,23 @@
+  <header class="gov-scheduling-header">
+    <i class="fa fa-angle-left" ng-click="previous()"></i>
+    <span>{{$ctrl.startOfWorkingWeek.format("MMMM, DD")}} - {{$ctrl.endOfWorkingWeek.format("MMMM, DD")}}</span>
+    <i class="fa fa-angle-right" ng-click="next()"></i>
+  </header>
+  <div class="week names" >
+    <span class="day" ng-repeat="day in $ctrl.weekDays">{{day.dayOfWeek}} {{day.date.format("DD")}}</span>
+  </div>
+  <div class="week" ng-repeat="location in $ctrl.locations">
+      <div class="location">{{location.name}}</div>
+      <span class="day" ng-repeat="day in location.days">
+        <div ng-repeat="slot in day.slots">
+          <div class="slot-heading">
+            <span>{{slot.slot}}</span>
+            <span>{{slot.session}}</span>
+          </div>
+          <div class="slot-title">{{slot.title}}</div>
+          <div class="slot-type">{{slot.type}}</div>
+        </div>
+      </span>
+  </div>
+        <!--ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected) }"
+        ng-click="select(day)"-->

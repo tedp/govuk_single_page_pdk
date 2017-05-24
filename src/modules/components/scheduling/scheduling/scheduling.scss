@@ -1,0 +1,163 @@
+// scheduling
+// ==========================================================================
+
+$module: 'gov-scheduling';
+
+
+@mixin vertical-centre($height)
+{
+    height:$height;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+@mixin border-box {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+$secondary-colour:#2875C7;
+$spacing:10px;
+$icon-width:40px;
+$header-height:40px;
+$border-colour:#CCC;
+$cell-height: 100px;
+
+#{$module} {
+
+        float:left;
+        display:block;
+        @include border-box;
+        background:white;
+        width:100%;
+        border:solid 1px $border-colour;
+        margin-bottom:10px;
+
+        > header.#{$module}-header {
+            float:right;
+            width:80%;
+            height:$header-height;
+
+            >* {
+                @include vertical-centre($header-height);
+            }
+
+            >i {
+                float:left;
+                width:$icon-width;
+                font-size:1.125em;
+                font-weight:bold;
+                position:relative;
+                @include border-box;
+                padding:0 $spacing;
+                cursor:pointer;
+            }
+
+            >i.fa-angle-left {
+                text-align:left;
+            }
+
+            >i.fa-angle-right {
+                text-align:right;
+                margin-left:$icon-width*-1;
+            }
+
+            >span {
+                float:left;
+                width:100%;
+                font-weight:bold;
+                text-transform:uppercase;
+                @include border-box;
+                padding-left:$icon-width+$spacing;
+                margin-left:$icon-width*-1;
+                text-align:center;
+                padding-right:$icon-width;
+                color:inherit;
+            }
+        }
+
+        > div.week {
+            float:right;
+            width:80%;
+            border-top:solid 1px $border-colour;
+            position: relative;
+
+            &:first-child {
+                border-top:none;
+            }
+
+            > div.location {
+                font-weight:bold;
+                position: absolute;
+                left: -(percentage(1 / 5));
+                width: percentage(1 / 5);
+                text-align:center;
+                @include vertical-centre($cell-height);
+                color: white;
+                background:$grey-1;
+            }
+
+            > span.day {
+                float:left;
+                width:percentage(1 / 5);
+                @include border-box;
+                border-left:solid 1px $border-colour;
+                font-size:0.75em;
+                text-align:left;
+                @include vertical-centre($cell-height   );
+                background:white;
+                cursor:pointer;
+                color:black;
+                padding: $gutter-one-quarter;
+
+                &:first-child {
+                    border-left:none;
+                }
+
+                &.today {
+                    background:#E3F2FF;
+                }
+
+                &.different-month {
+                    color:#C0C0C0;
+                }
+
+                &.selected {
+                    background:$secondary-colour;
+                    color:white;
+                }
+
+                > div > div.slot-heading {
+                    @include bold-14;
+
+                    > span:first-child {
+                        float: left;
+                    }
+
+                    > span {
+                        float: right;
+                    }
+                }
+
+                > div > div.slot-title {
+                    @include bold-14;
+                    clear: both;
+                }
+            }
+
+            &.names > span {
+                @include vertical-centre(30px);
+                background:$grey-2;
+                width:percentage(1 / 5);
+                text-align:center;
+                font-weight:bold;
+            }
+        }
+}
+
+
+/*
+
+HTML Usage
+
+*/

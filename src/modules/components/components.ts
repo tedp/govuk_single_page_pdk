@@ -6,6 +6,7 @@ import layout from './layout/layout';
 import media from './media/media';
 import navigation from './navigation/navigation';
 import timeline from './timeline/timeline';
+import scheduling from './scheduling/scheduling';
 import polyfills from './polyfills/polyfills';
 
 const module = angular.module('govuk-single-page-pdk.components', [
@@ -17,7 +18,8 @@ const module = angular.module('govuk-single-page-pdk.components', [
   media,
   navigation,
   polyfills,
-  timeline
+  timeline,
+  scheduling
 ]);
 
 export default module.name;

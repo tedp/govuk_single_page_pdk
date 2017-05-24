@@ -6,6 +6,7 @@ import layout from './layout/layout.docs';
 import media from './media/media-demos';
 import navigation from './navigation/navigation-demos';
 import timeline from './timeline/timeline-demos';
+import scheduling from './scheduling/scheduling-demos';
 
 const module = angular.module('govuk-single-page-pdk.component-demos', [
   banners,
@@ -15,7 +16,8 @@ const module = angular.module('govuk-single-page-pdk.component-demos', [
   layout,
   media,
   navigation,
-  timeline
+  timeline,
+  scheduling
 ]);
 
 export default module.name;
